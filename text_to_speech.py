@@ -1,10 +1,17 @@
-from gTTS import gTTS
+from gtts import gTTS
 import os
 
-mytext="Hello"
-langs ='en'
+print("Tamizhuku En Ondrai Azhuthavum")
+print("press 2 for English: ")
+l2s=input()
+if (ls==1):
+    lans='ta'
+else:
+    lans = 'en'
 
-myobj=gTTS(text=mytext, lang=langs,slow=False)
+st=input("enter text to convert into speech: ")
+
+myobj=gTTS(text=st, lang=lans,slow=False)
 myobj.save("welcome.mp3")
 
-os.system("mpg321 welcome.mp3")
+os.system("start welcome.mp3")
